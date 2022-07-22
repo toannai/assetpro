@@ -1,7 +1,7 @@
 from flask import Flask
 from app.setting import ProdConfig
 from flask import Blueprint
-from app.home import routes as home_bp
+from app.api import routes as api_bp
 
 
 
@@ -21,4 +21,4 @@ def create_app(config_object=ProdConfig):
 
 def register_blueprints(app):
     """Register Flask blueprints."""
-    app.register_blueprint(home_bp.blueprint)
+    app.register_blueprint(api_bp.blueprint)
