@@ -10,9 +10,8 @@ class Config(object):
     SECRET_KEY="Th3k3y"
     APP_DIR = os.path.abspath(os.path.dirname(__file__))  # This directory
     PROJECT_ROOT = os.path.abspath(os.path.join(APP_DIR, os.pardir))
-    ES_HOST='127.0.0.1'
-    ES_PORT='9200'
-    ES_URI='http://127.0.0.1:9200'
+    ELASTICSEARCH_HOST ='http://192.168.150.131:9200'
+    ELASTICSEARCH_DATAINDEX ='asset'
 
 
 class ProdConfig(Config):
@@ -21,9 +20,8 @@ class ProdConfig(Config):
     ENV = 'prod'
     DEBUG = False
     ## config Elasticsearch
-    ES_HOST='127.0.0.1'
-    ES_PORT='9200'
-    ES_URI='http://127.0.0.1:9200'
+    ELASTICSEARCH_HOST ='http://192.168.150.131:9200'
+    ELASTICSEARCH_DATAINDEX ='asset'
 
 class DevConfig(Config):
     """Development configuration."""
